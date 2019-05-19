@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>HUB :: Usuários</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <ul>
+    {% for user in object_list %}
+        <li><a href="{% url 'core:user-detail' user.id %}">{{ user.first_name }} - {{ user.last_name }} ({{ user.username }})</a></li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
